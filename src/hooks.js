@@ -1,3 +1,4 @@
+import {useState} from 'react'
 export const useAnimatedScale = (scGap, dir) => {
     const [scale, setScale] = useState(0)
     const [animated, setAnimated] = useState(false)

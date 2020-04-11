@@ -12,8 +12,8 @@ const boxStyle = (w, h) => {
     return {width, height, position, left, top, border}
 }
 
-const Box = ({w, h, children}) => {
-    return (<div style = {boxStyle(w, h)}>
+const Box = ({w, h, children, onClick}) => {
+    return (<div onClick = {onClick} style = {boxStyle(w, h)}>
               {children}
           </div>)
 }
