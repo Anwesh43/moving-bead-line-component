@@ -12,9 +12,10 @@ const beadStyle = (size, scale, beadSize) => {
     const height = `${beadSize}px`
     const position = 'absolute'
     const left = `${size * scale - beadSize / 2}px`
-    const bordeRadius = '50%'
+    const top = `${-beadSize / 4}px`
+    const borderRadius = '50%'
     const background = color
-    return {position, width, height, left, bordeRadius}
+    return {position, width, height, left, top, borderRadius, background}
 }
 
 const lineStyle = (size, scale) => {
@@ -26,7 +27,7 @@ const lineStyle = (size, scale) => {
 
 const BeadLine = ({size, scale, i, gap, n}) => {
     const sc = divideScale(sinify(scale), i, n)
-    return <div style = {position : 'absolute', top : `${gap * i}px`}>
+    return <div style = {{position : 'absolute', top : `${gap * i + gap}px`}}>
               <div style = {beadStyle(size, sc, gap / beadSizeFactor)}>
               </div>
               <div style = {lineStyle(size, sc)}>
