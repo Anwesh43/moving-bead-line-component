@@ -33,3 +33,4 @@ const BeadLine = ({size, scale, i, gap, n}) => {
               </div>
           </div>
 }
+export default BeadLine
